@@ -1,0 +1,44 @@
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+/**
+ * Created By shamodha_s_rathnamalala
+ * Date : 5/21/2023
+ * Time :10:43 PM
+ */
+
+public class Server {
+    private ServerSocket serverSocket;
+
+    private Server(ServerSocket serverSocket) {
+        this.serverSocket = serverSocket;
+    }
+    private void startServer(){
+        try {
+            while (!serverSocket.isClosed()){
+                Socket socket = serverSocket.accept();
+                System.out.println("A new client has connected");
+                ClientHandler clientHandler = new ClientHandler(socket);
+                Thread thread = new Thread(clientHandler);
+                thread.start();
+            }
+        } catch (IOException e) {
+            closeServerSocket();
+        }
+    }
+    private void closeServerSocket(){
+        try {
+            if (serverSocket != null)
+                serverSocket.close();
+        } catch (IOException e) {e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void main(String[] args) throws IOException {
+        ServerSocket serverSocket= new ServerSocket(1234);
+        Server server = new Server(serverSocket);
+        server.startServer();
+    }
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Group-Chat-Test/Group-Chat-Test.iml" filepath="$PROJECT_DIR$/Group-Chat-Test/Group-Chat-Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Observer_Disign_Pattern/Observer_Disign_Pattern.iml" filepath="$PROJECT_DIR$/Observer_Disign_Pattern/Observer_Disign_Pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Server-Client-Chat-Test/Server-Client-Chat-Test.iml" filepath="$PROJECT_DIR$/Server-Client-Chat-Test/Server-Client-Chat-Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Test.iml" filepath="$PROJECT_DIR$/Test.iml" />
+    </modules>
+  </component>
+</project>
